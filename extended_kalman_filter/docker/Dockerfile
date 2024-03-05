@@ -9,6 +9,12 @@ RUN apt -y update \
     && echo "export ROS_HOSTNAME=localhost" >> /root/.bashrc \
     && echo "source /opt/ros/noetic/setup.bash" >> /root/.bashrc
 
+RUN apt install -y python3-pip
+
+RUN apt -y update \
+	&& pip install scipy \
+	&& pip install sympy 
+
 COPY ros_ws /ros_ws
 
 WORKDIR /ros_ws
