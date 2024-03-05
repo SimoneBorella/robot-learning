@@ -1,0 +1,8 @@
+prefix=/ros_ws/install
+
+Name: double_pendulum
+Description: Description of double_pendulum
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

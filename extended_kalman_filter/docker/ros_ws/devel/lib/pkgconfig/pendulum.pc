@@ -1,0 +1,8 @@
+prefix=/ros_ws/devel
+
+Name: pendulum
+Description: Description of pendulum
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

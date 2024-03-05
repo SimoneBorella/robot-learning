@@ -1,0 +1,11 @@
+<launch>
+  <node name="pendulum_node" pkg="pendulum" type="pendulum.py" output="screen"/>
+  <node name="sensor_node" pkg="pendulum" type="sensor.py" output="screen"/>
+  <node name="ekf_node" pkg="pendulum" type="ekf.py" output="screen"/>
+  <node name="visualization_node" pkg="pendulum" type="visualization.py" output="screen"/>
+  <!-- <node name="rqt_multiplot" pkg="rqt_multiplot" type="rqt_multiplot" respawn="false" output="screen">
+    <param name="config_file" value="$(find pendulum)/config/rqt_multiplot.xml"/>
+  </node> -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pendulum)/config/pendulum_frame.rviz"/>
+  
+</launch>
